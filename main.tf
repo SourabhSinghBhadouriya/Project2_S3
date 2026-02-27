@@ -6,6 +6,13 @@ provider "aws" {
 resource "aws_s3_bucket" "website_bucket" {
 
   bucket = "sourabh-project2-static-site-12345"
+ tags = {
+
+    Environment = "Dev"
+
+    Project     = "Version-Control"
+  
+}
 }
 resource "aws_s3_bucket_public_access_block" "public" {
 
